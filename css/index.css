@@ -189,6 +189,7 @@ body {
   margin-left: 10px;
   font-size: 14px;
   transition: 0.3s;
+  text-decoration: none;
 }
 
 .socials a:hover {

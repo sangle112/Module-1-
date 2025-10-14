@@ -175,13 +175,6 @@ textarea {
   justify-content: center;
   width: 100%;
 }
-
-/* .footer-column map img {
-  border-radius: 8px;
-  display: flex;
-  align-self: center;
-  width: 100%;
-} */
 .footer-bottom {
   margin-top: 30px;
   display: flex;
@@ -206,6 +199,7 @@ textarea {
   margin-left: 8px;
   font-size: 14px;
   transition: 0.3s;
+  text-decoration: none;
 }
 .icon span {
   color: #000;
