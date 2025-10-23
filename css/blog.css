@@ -1,0 +1,280 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, Arial, sans-serif;
+}
+body {
+  background-color: #fff;
+  color: #222;
+  max-width: auto;
+}
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+.heading {
+  background-color: lightyellow;
+  gap: 10px;
+  width: auto;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+  border: 1px solid black;
+}
+.icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+}
+.menu {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  white-space: nowrap;
+}
+.menu a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  padding: 4px 6px;
+}
+.call {
+  font-size: 14px;
+  color: #000;
+}
+.box {
+  padding: 60px 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+  text-align: center;
+}
+.title span {
+  font-family: "Roboto Slab";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+}
+.title p {
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+.box-flex {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.box-card {
+  text-align: left;
+}
+
+.box-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.box-card h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.box-card .date {
+  color: #888;
+  font-size: 13px;
+}
+.load-more {
+  background-color: #ff4d00;
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  margin-top: 30px 30px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: auto;
+  text-align: center;
+  display: flex;
+}
+.footer {
+  background-color: #0d0f0d;
+  color: #fff;
+  padding: 25px 60px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 30px;
+}
+
+.footer-column h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-column ul li a:hover {
+  color: #f08a24;
+}
+
+.footer-column p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+}
+
+.footer-column map {
+  width: 470px;
+  height: 268px;
+  border-radius: 8px;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-top: 2px solid black;
+}
+
+.footer-logo p {
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.socials a {
+  display: inline-block;
+  background: #1b1b1b;
+  color: #fff;
+  width: 80px;
+  height: 36px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 4px;
+  margin-left: 10px;
+  font-size: 14px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.socials a:hover {
+  background-color: #f08a24;
+}
+@media screen and (max-width: 767.98px) {
+  .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .container {
+    align-items: center;
+    padding: 0 10px;
+  }
+  .hamburger {
+    display: block;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .title p {
+    font-size: 13px;
+    margin-bottom: 25px;
+  }
+
+  .box-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .box-card img {
+    width: 50%;
+    border-radius: 6px;
+  }
+
+  .box-card h3 {
+    font-size: 14px;
+  }
+
+  .box-card .date {
+    font-size: 12px;
+  }
+  .load-more {
+    width: 50%;
+    max-width: 100px;
+  }
+  .menu {
+    display: none; /* ẩn menu mặc định */
+    flex-direction: column;
+    color: #fff;
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    background: lightgray;
+    border-radius: 8px;
+    padding: 10px;
+    width: 150px;
+    animation: slideDown 0.3s ease;
+  }
+  .icon {
+    align-items: center;
+  }
+  .footer {
+    width: 100%;
+    margin: 15px 0;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .footer-column map {
+    width: 30%;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+input:checked ~ .menu {
+  display: flex;
+}

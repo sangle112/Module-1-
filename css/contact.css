@@ -20,6 +20,11 @@ body {
   padding: 10px 40px;
   border: 1px solid black;
 }
+.hamburger {
+  display: none;
+  cursor: pointer;
+  width: 30px;
+}
 .icon {
   display: flex;
   align-items: center;
@@ -33,7 +38,7 @@ body {
   white-space: nowrap;
 }
 .menu a {
-  text-decoration: underline;
+  text-decoration: none;
   color: #4b2b8d;
   font-weight: 500;
   padding: 4px 6px;
@@ -42,7 +47,6 @@ body {
   font-size: 14px;
   color: #000;
 }
-
 .contact-section {
   padding: 80px 0;
 }
@@ -53,10 +57,12 @@ body {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  gap: 50px;
+  align-items: flex-start;
   flex-wrap: wrap;
+  gap: 40px;
 }
 
+/* ===== LEFT SIDE ===== */
 .contact-left {
   flex: 1;
   min-width: 300px;
@@ -69,9 +75,29 @@ body {
 }
 
 .contact-left p {
-  color: #555;
+  color: #666;
   font-size: 14px;
   margin-bottom: 25px;
+  max-width: 400px;
+}
+
+.contact-info {
+  list-style: none;
+  color: #333;
+}
+
+.contact-info li {
+  font-size: 14px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ===== RIGHT SIDE (FORM) ===== */
+.contact-right {
+  flex: 1;
+  min-width: 320px;
 }
 
 .contact-form {
@@ -81,27 +107,27 @@ body {
 }
 
 .contact-form label {
-  font-size: 13px;
-  font-weight: 600;
-  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 5px;
 }
 
 .contact-form input,
 .contact-form textarea {
   width: 100%;
   padding: 12px;
-  border: none;
+  border: 1px solid #ddd;
   border-radius: 5px;
-  background-color: #f4f4f4;
+  background-color: #f9f9f9;
   font-size: 14px;
   outline: none;
-  transition: 0.3s;
+  transition: border 0.3s;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
+  border-color: #ff4d00;
   background-color: #fff;
-  box-shadow: 0 0 0 2px #ff5c33;
 }
 
 .contact-form textarea {
@@ -109,66 +135,25 @@ body {
   resize: vertical;
 }
 
+/* ===== BUTTON ===== */
 .btn-submit {
   background-color: aqua;
   color: #fff;
   border: none;
-  padding: 12px;
   border-radius: 5px;
-  font-weight: 500;
-  text-transform: lowercase;
+  padding: 12px 20px;
   margin-top: 10px;
+  font-size: 14px;
+  font-weight: 500;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(255, 92, 51, 0.3);
-  transition: background 0.3s, transform 0.2s;
+  width: fit-content;
+  transition: background 0.3s;
 }
 
 .btn-submit:hover {
-  background-color: #e24d28;
-  transform: translateY(-2px);
+  background-color: #e04300;
 }
 
-.contact-info-box {
-  flex: 1;
-  min-width: 280px;
-  background: #ffcb61;
-  padding: 30px 25px;
-  border-radius: 10px;
-  color: #222;
-}
-
-.contact-info-box h4 {
-  text-transform: lowercase;
-  font-size: 14px;
-  font-weight: 700;
-  margin-top: 20px;
-}
-
-.contact-info-box p {
-  font-size: 14px;
-  margin-top: 5px;
-  line-height: 1.5;
-}
-
-.social-icons {
-  margin-top: 15px;
-}
-
-.social-icons a {
-  color: #222;
-  text-decoration: none;
-  margin-right: 10px;
-  font-size: 16px;
-  transition: color 0.3s;
-}
-
-.social-icons a:hover {
-  color: #ff5c33;
-}
-
-.socials a:hover {
-  background-color: #f08a24;
-}
 .footer {
   background-color: #0d0f0d;
   color: #fff;
@@ -221,12 +206,11 @@ body {
 }
 
 .footer-bottom {
-  margin-top: 30px;
+  margin-right: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  border-top: 2px solid black;
 }
 
 .footer-logo p {
@@ -246,7 +230,7 @@ body {
   text-align: center;
   line-height: 30px;
   border-radius: 4px;
-  margin-left: 10px;
+  margin-left: 8px;
   font-size: 14px;
   transition: 0.3s;
   text-decoration: none;
